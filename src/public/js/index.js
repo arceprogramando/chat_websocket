@@ -35,13 +35,13 @@ socket.on('messageLogs', (data) => {
   log.innerHTML = messages;
 });
 
-socket.on('newUserConnected', (data) => {
+socket.on('newUserConnected', (user) => {
   Swal.fire({
     toast: true,
     position: 'top-end',
     showConfirmationButton: false,
     timer: 3000,
-    title: `${data} sa ha unido al chat`,
+    title: `${user} se ha unido al chat`,
     icon: 'success',
   });
 });

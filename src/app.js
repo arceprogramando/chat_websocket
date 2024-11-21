@@ -19,14 +19,13 @@ app.use('/', viewsRouter);
 const PORT = 8080;
 
 const server = app.listen(PORT, () => {
-  console.log(`Puerto http://localhost:${PORT} Activo `);
+  console.log(`Puerto ${PORT} Activo `);
 });
 
 const io = new Server(server);
 const messages = [];
 
 io.on('connection', (socket) => {
-  console.log('Nuevo cliente conectado');
 
   socket.on('message', (data) => {
     messages.push(data);
