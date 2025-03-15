@@ -1,3 +1,5 @@
+/* global io, Swal */
+
 const socket = io();
 
 let user;
